@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "composeUp",
+            "type": "shell",
+            "command": "docker-compose run --rm app sh -c \"python manage.py test\"",
+            "problemMatcher": [],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "always"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "composeDown",
+            "type": "shell",
+            "command": "docker-compose down",
+            "problemMatcher": []
+        }
+    ]
+}

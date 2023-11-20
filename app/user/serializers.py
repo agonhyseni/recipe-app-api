@@ -5,7 +5,7 @@ from django.contrib.auth import (
     get_user_model,
     authenticate,
 )
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext as _
 
 from rest_framework import serializers
 
@@ -53,6 +53,9 @@ class AuthTokenSerializer(serializers.Serializer):
             username=email,
             password=password,
         )
+
+        ## log user
+        print(email, password)
 
         if not user:
             msg = _('Unable to authenticate with provided credentials.')

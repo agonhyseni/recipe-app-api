@@ -54,7 +54,7 @@ class AuthTokenSerializer(serializers.Serializer):
             password=password,
         )
 
-        ## log user
+        # log user
         print(email, password)
 
         if not user:
